@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../resources/css/styles.css" />
+		<title>03 | JavaScript Object Constructor 2</title>
+	</head>
+
+	<body>
+		<div class="header"><h1>JavaScript Object Constructor 2</h1></div>
+		<script>
+			// Creating Objects using "Constructor Functions":
+			//-------------------------------------------------------------------------------------------------------
+			// NOTE! The object class constructor function name should always begin with a capital letter.
+			// Creating an object class using a constructor function:
+			function Person(firstName, lastName, age) {
+				this.firstName = firstName;
+				this.lastName = lastName;
+				this.age = age;
+				//Object method:
+				this.ageStatement = `${this.firstName} is ${this.age} years old`;
+			}
+
+			// Adding a prototype functio/method to the "Person" object:
+			Person.prototype.getFullName = function () {
+				return `${this.firstName} ${this.lastName}`;
+			};
+
+			// Adding another prototype to "Person" object:
+			Person.prototype.editAge = function (age) {
+				this.age = age;
+				this.ageEdited = true; // This property assigns a boolean to an object when this function is used
+				// to edit the "age" property after initial object instantiation.
+			};
+
+			// A new object is instantiated using the constructor function method (of the Object class created above):
+			let person1 = new Person("Evans", "Gardner", 34);
+
+			person1.editAge(77); // Using the prototype method .editAge(arg) changes the age property value of the "person1" object
+
+			console.log(person1); // Logging to console will show changes made to the age property value and a new property and value:
+			//-------------------------------------------------------------------------------------------------------
+		</script>
+	</body>
+</html>

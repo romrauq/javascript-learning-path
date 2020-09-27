@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../resources/css/styles.css" />
+		<title>05 | Using Object.create()</title>
+	</head>
+
+	<body>
+		<div class="header"><h1>Using Object.create()</h1></div>
+		<script>
+			//-------------------------------------------------------------------------------------------------------
+			const bookPrototypes = {
+				getBookSummary: function () {
+					return `${this.name} was written by ${this.author} and was first published in ${this.year}`;
+				},
+				getBookAge: function () {
+					let year = new Date().getFullYear;
+					let age = year - this.year;
+					return `${this.name} is ${age} years old`;
+				},
+			};
+
+			// Another method for creating a new object using Object.create():
+			// 1. The bookPrototypes variable is passed as an argument within the first parameter of the Object.create() function.
+			// 2. The object containing the property and values of the object is passed as an argument within the second parameter of the Object.create() function.
+			const book2 = Object.create(bookPrototypes, {
+				title: { value: "Echopraxia" },
+				author: { value: "Peter Watts" },
+				year: { value: 2015 },
+			});
+
+			console.log(book1);
+			console.log(book2);
+			//-------------------------------------------------------------------------------------------------------
+		</script>
+	</body>
+</html>
