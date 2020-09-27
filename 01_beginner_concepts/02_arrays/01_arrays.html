@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../resources/css/styles.css" />
+		<title>01 | JavaScript Arrays</title>
+	</head>
+
+	<body>
+		<div class="header"><h1>Arrays</h1></div>
+		<script>
+			// Arrays are used to store multiple values in a variable.
+			// Arrays are of the "Object" datatype.
+			//-------------------------------------------------------------------------------------------------------
+			// Array Creation Method 1:
+			// Creating an empty array with constructor then assigning individual values to various indexes.
+			let arr1 = new Array(); // Creates an empty array.
+			console.log(arr1);
+			arr1[0] = 7; // Assigns the value of 7 to the first index.
+			arr1[1] = 2; // Assigns the value of 2 to the second index.
+			arr1[2] = 4; // Assigns the value of 4 to the third index.
+			arr1[3] = 8; // Assigns the value of 8 to the fourth index.
+			arr1[4] = 16; // Assigns the value of 16 to the fifth index.
+			console.log(arr1);
+			//-------------------------------------------------------------------------------------------------------
+			// Array Creation Method 2:
+			// Using an array constructor with values passed as arguments.
+			let arr2 = new Array(1, 2, 3, 4); // arr1 returns [1, 2, 3 ,4];
+			let arr3 = new Array("a", "b", "c", "d"); // arr3 returns ["a", "b", "c", "d"];
+
+			//-------------------------------------------------------------------------------------------------------
+			// Array Creation Method 3:
+			// Creating an array by initializing items directly to variable.
+			let arr4 = ["w", "x", "y", "z"];
+			//-------------------------------------------------------------------------------------------------------
+		</script>
+	</body>
+</html>
