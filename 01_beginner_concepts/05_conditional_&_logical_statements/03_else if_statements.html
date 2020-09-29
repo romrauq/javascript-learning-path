@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../resources/css/styles.css" />
+		<title>01 | if else Statements</title>
+	</head>
+
+	<body>
+		<div class="header"><h1>if else statements</h1></div>
+		<script>
+			//----------------------------------------------------------------------------------------------------------
+			name = "Steve";
+
+			if (name == "Harry") {
+				console.log("Expecto Patronum " + name); // This statement will run if the above statement is true.
+			} else if (name == "Mark") {
+				console.log("Oh hi " + name); // This statement will run if the above statement is true.
+			} else if (name == "Steve") {
+				console.log("Hello " + name); // This statement will run if the above statement is true.
+			} else {
+				let yourName = prompt("what is your name?"); // If none of the above statement is true, this will run as default.
+				console.log("Your name is " + yourName);
+			}
+			// "Hello Steve" will be logged to the console.
+			//----------------------------------------------------------------------------------------------------------
+		</script>
+	</body>
+</html>
