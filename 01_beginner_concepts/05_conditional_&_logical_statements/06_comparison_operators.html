@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../resources/css/styles.css" />
+		<title>05 | Comparison Operators</title>
+	</head>
+
+	<body>
+		<div class="header"><h1>Comparison Operators</h1></div>
+		<script>
+			// Comparison Operators re used to compare values:
+			// 1. values are equal ==,
+			// 2. datatype &/or values are equal ===,
+			// 3. values not equal !=
+			// 4. datatype &/or values are not equal !==
+			//-------------------------------------------------------------------------------------------------------
+			let num1 = 17; // The datatype value is a "number"
+			let num2 = "17"; // The datatype value is a "string"
+
+			// Using basic comparison (==):
+			if (num1 == num2) {
+				console.log("The values in both variables are equal!"); // This will be logged to the console.
+			} else {
+				console.log("The values in both variables are not equal!");
+			}
+			//-------------------------------------------------------------------------------------------------------
+			let num3 = 400;
+			let num4 = "400";
+
+			//Using strict comparison (===):
+			if (num3 === num4) {
+				console.log(
+					"The datatypes and values of the two variables are both equal!"
+				);
+			} else {
+				console.log(
+					"The datatypes and values of the two variables are not both equal!"
+				); // This will be logged to the console.
+			}
+			//-------------------------------------------------------------------------------------------------------
+			let num5 = 400;
+			let num6 = 500;
+
+			//Using strict comparison (===):
+			if (num5 != num6) {
+				console.log("The values of the two variables are not equal!"); // This will be logged to the console.
+			} else {
+				console.log("The values of the two variables are equal!");
+			}
+			//-------------------------------------------------------------------------------------------------------
+			let num7 = 300;
+			let num8 = "300";
+
+			//Using strict comparison (===):
+			if (num7 !== num8) {
+				console.log("The values of the two variables are not equal!"); // This will be logged to the console.
+			} else {
+				console.log("The values of the two variables are equal!");
+			}
+			//-------------------------------------------------------------------------------------------------------
+		</script>
+	</body>
+</html>
