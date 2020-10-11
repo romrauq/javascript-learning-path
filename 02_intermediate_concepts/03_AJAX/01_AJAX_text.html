@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../resources/css/styles.css" />
+		<title>01 | AJAX Request</title>
+	</head>
+
+	<body>
+		<div class="header">
+			<h1>Asynchronous JavaScript & XML (AJAX) Reuest</h1>
+		</div>
+		<button id="button">Get Response</button>
+		<script>
+			//-------------------------------------------------------------------------------------------------------
+			const myButton = document.getElementById("button"); // Assigning button DOM element to variable.
+			myButton.addEventListener("click", getRequest); // Adding an event listener to myButton variable.
+
+			function getRequest() {
+				// Create a new XMLHttprequest object:
+				let xhr = new XMLHttpRequest();
+
+				// Fetching data using .open() appended to the XMLHttprequest object:
+				// Params = 1. Request type, 2. Request URL/File directory, 3. Asychronous boolean)
+				xhr.open("GET", "./text-info.txt", true);
+
+				// Assigning function to to run upon successful load of response:
+				xhr.onload = function () {
+					if (xhr.status === 200) {
+						console.log(xhr.responseText);
+					} else {
+						console.log("Error, no respose found.");
+					}
+				};
+				//Send AJAX request using the the XMLHttprequest object with the .send() method appended:
+				xhr.send();
+			}
+			//-------------------------------------------------------------------------------------------------------
+		</script>
+	</body>
+</html>
