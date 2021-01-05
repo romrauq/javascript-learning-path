@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../../resources/css/styles.css" />
-		<title>04 | for...in & for...of Loops</title>
+		<title>04 | for...in Loop</title>
 	</head>
 
 	<body>
@@ -33,18 +33,6 @@
 
 			for (x in person) {
 				console.log("Property value: " + person[x]); //This is how to return the property values of an object using the for in loop.
-			}
-			//-------------------------------------------------------------------------------------------------------
-			// for...of will loop through and return values of an array.
-			// for...of loops only loop through iterable objects like such as arrays, map and set.
-			// for...of loops do not work on objects because objects are not iterable.
-
-			for (x of myArr) {
-				console.log(x);
-			}
-
-			for (x of myArr2) {
-				console.log(x);
 			}
 			//-------------------------------------------------------------------------------------------------------
 		</script>
