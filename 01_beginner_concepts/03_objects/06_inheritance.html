@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../../resources/css/styles.css" />
-		<title>04 | JS Object Inheritance</title>
+		<title>06 | JS Object Inheritance</title>
 	</head>
 
 	<body>
@@ -26,7 +26,7 @@
 
 			// Creating a second constructor function that inherits the properties of the "Book" constructor function:
 			function Comic(name, author, year, rating) {
-				// The call method is used on the object constructor "Book" to allow the "Comic" constructor inherit its properties and functions
+				// The call method is chained onto the "Book" class within the code block to allow the "Comic" class to inherit its properties and functions
 				Book.call(this, name, author, year); // First parameter refers to the current object constructor
 				this.rating = rating; // The new property "rating" for the "Comic" object constructor has its assignment conditions defined.
 			}
