@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/styles.css" />
+		<title>02 | setInterval</title>
+	</head>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		.header {
+			color: white;
+			font-family: sans-serif;
+			text-align: center;
+			padding: 20px;
+			background-color: #666;
+		}
+	</style>
+	<body>
+		<div class="header"><h1>setInterval</h1></div>
+		<script>
+			//The setInterval event function is used to execute a particular function at set intervals for an infinite time.
+			//setinterval(function(), time interval (in milliseconds))
+			//-------------------------------------------------------------------------------------------------------
+			let hour = new Date().getHours();
+			let min = new Date().getMinutes();
+			let sec = new Date().getSeconds();
+			let time = `${hour}:${min}:${sec}`;
+
+			setInterval(() => console.log(time), 1000);
+			//-------------------------------------------------------------------------------------------------------
+		</script>
+	</body>
+</html>
