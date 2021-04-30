@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../resources/css/styles.css" />
+		<title>01 | Scopes</title>
+	</head>
+
+	<body>
+		<div class="header"><h1>Scopes</h1></div>
+		<script>
+			// Scopes refer to the location of a variable, whether they are globally scoped or locally scoped.
+			// A local scoped variable is one that is created/declared within a function or an object
+			// A global scoped variable is one that is declared outside of all local scopes.
+			// Scope prevents accidental reassignment of values to variables within a local scope from outside their scope.
+			//-------------------------------------------------------------------------------------------------------
+			let age = 5000; // A globally scoped variable.
+
+			function getAge() {
+				let age = 50; // A variable locally scoped within the getAge() function.
+				console.log(age);
+			}
+
+			console.log(age); // The value of the variable returned will be that of the global scoped variable "5000".
+			getAge(); // The value returned will be that of the local scoped variable "50".
+			//-------------------------------------------------------------------------------------------------------
+		</script>
+	</body>
+</html>
