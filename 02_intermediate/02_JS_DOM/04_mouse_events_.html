@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../resources/css/styles.css" />
+		<title>04 | Mouse Events</title>
+	</head>
+	<style>
+		.active-area {
+			position: fixed;
+			top: 85px;
+			right: 5px;
+			padding: 10px 20px;
+			border: 1px solid black;
+		}
+
+		.heading-text {
+			text-align: center;
+			margin: 15px auto;
+		}
+
+		.button-container {
+			width: fit-content;
+			height: fit-content;
+			margin: 5px auto 40px;
+		}
+
+		.my-button {
+			padding: 10px 20px;
+			cursor: pointer;
+		}
+
+		.div-container {
+			width: fit-content;
+			height: fit-content;
+			margin: 5px auto 40px;
+		}
+		.my-div {
+			color: white;
+			display: inline-block;
+			width: fit-content;
+			padding: 30px 20px;
+			background-color: Teal;
+			cursor: pointer;
+		}
+	</style>
+	<body>
+		<div class="active-area" id="active-area">active</div>
+
+		<div class="header"><h1>Mouse Events</h1></div>
+		<h1 class="heading-text">Mouse Click Events;</h1>
+		<div class="button-container">
+			<button class="my-button" id="button-1">Click</button>
+			<button class="my-button" id="button-2">Double Click</button>
+			<button class="my-button" id="button-3">Mouse Down</button>
+			<button class="my-button" id="button-4">Mouse Up</button>
+		</div>
+
+		<h1 class="heading-text">Other Mouse Events;</h1>
+		<div class="div-container">
+			<div class="my-div" id="button-5">Mouse Enter</div>
+			<div class="my-div" id="button-6">Mouse Leave</div>
+			<div class="my-div" id="button-7">Mouse Over</div>
+			<div class="my-div" id="button-8">Mouse Out</div>
+			<div class="my-div" id="button-9">Mouse Move</div>
+		</div>
+		<script>
+			//-------------------------------------------------------------------------------------------------------
+			let active = document.getElementById("active-area");
+			let target1 = document.getElementById("button-1");
+			let target2 = document.getElementById("button-2");
+			let target3 = document.getElementById("button-3");
+			let target4 = document.getElementById("button-4");
+			let target5 = document.getElementById("button-5");
+			let target6 = document.getElementById("button-6");
+			let target7 = document.getElementById("button-7");
+			let target8 = document.getElementById("button-8");
+			let target9 = document.getElementById("button-9");
+
+			// A) Mouse events:
+			// 	i) Click event:
+			target1.addEventListener("click", clickFunction);
+			//	ii) Double click event:
+			target2.addEventListener("dblclick", doubleClickFunction);
+			//	iii) Mouse down event:
+			target3.addEventListener("mousedown", mouseDownFunction);
+			//	iv) Mouse up event:
+			target4.addEventListener("mouseup", mouseUpFunction);
+
+			//B) Other mouse events:
+			// i) Mouse enter event:
+			target5.addEventListener("mouseenter", mouseEnter);
+			// ii) Mouse leave event:
+			target6.addEventListener("mouseleave", mouseLeave);
+			// iii) Mouse over event:
+			target7.addEventListener("mouseover", mouseOver);
+			// iv) Mouse out event:
+			target8.addEventListener("mouseout", mouseOut);
+			// v) Mouse move event:
+			target9.addEventListener("mousemove", mouseMove);
+
+			//Functions:
+			function clickFunction() {
+				if (active.style.backgroundColor == "") {
+					active.style.backgroundColor = "green";
+				} else if (active.style.backgroundColor == "green") {
+					active.style.backgroundColor = "blue";
+				} else {
+					active.style.backgroundColor = "green";
+				}
+			}
+			function doubleClickFunction() {
+				if (active.style.backgroundColor == "") {
+					active.style.backgroundColor = "green";
+				} else if (active.style.backgroundColor == "green") {
+					active.style.backgroundColor = "blue";
+				} else {
+					active.style.backgroundColor = "green";
+				}
+			}
+			function mouseDownFunction() {
+				if (active.style.backgroundColor == "") {
+					active.style.backgroundColor = "green";
+				} else if (active.style.backgroundColor == "green") {
+					active.style.backgroundColor = "blue";
+				} else {
+					active.style.backgroundColor = "green";
+				}
+			}
+			function mouseUpFunction() {
+				if (active.style.backgroundColor == "") {
+					active.style.backgroundColor = "green";
+				} else if (active.style.backgroundColor == "green") {
+					active.style.backgroundColor = "blue";
+				} else {
+					active.style.backgroundColor = "green";
+				}
+			}
+			function mouseEnter() {
+				if (target5.style.backgroundColor == "teal") {
+					target5.style.backgroundColor = "red";
+				} else {
+					target5.style.backgroundColor = "teal";
+				}
+			}
+			function mouseLeave() {
+				if (target6.style.backgroundColor == "teal") {
+					target6.style.backgroundColor = "black";
+				} else {
+					target6.style.backgroundColor = "teal";
+				}
+			}
+			function mouseOver() {
+				if (target7.style.backgroundColor == "teal") {
+					target7.style.backgroundColor = "cyan";
+				} else {
+					target7.style.backgroundColor = "teal";
+				}
+			}
+			// function mouseOut(e) {
+			// 	if (e.target.style.backgroundColor == "teal") {
+			// 		target8.style.backgroundColor = "cyan";
+			// 	} else if (e.target.style.backgroundColor == "cyan") {
+			// 		target8.style.backgroundColor = "teal";
+			// 	}
+			// }
+			// function mouseMove(e) {
+			// 	if (e.target == target8) {
+			// 		target8.style.backgroundColor = "cyan";
+			// 	} else if (e.target != target8) {
+			// 		target8.style.backgroundColor = "teal";
+			// 	}
+			// }
+			//-------------------------------------------------------------------------------------------------------
+		</script>
+	</body>
+</html>

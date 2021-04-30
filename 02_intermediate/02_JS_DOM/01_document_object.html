@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../resources/css/styles.css" />
+		<title>01 | Examining The "document" Object</title>
+	</head>
+
+	<body>
+		<div class="header">
+			<h1>Examining The "document" Object</h1>
+		</div>
+
+		<div class="buttons">
+			<button class="button" id="red">Red</button>
+			<button class="button" id="yellow">Yellow</button>
+			<button class="button" id="blue">Blue</button>
+		</div>
+
+		<script>
+			//-------------------------------------------------------------------------------------------------------
+			console.dir(document); // The "document" object returns the DOM of the entire webpage.
+
+			console.log(document.title); // The webpage's title is logged to the console.
+			console.log(document.domain); // The document's local address is logged to the console.
+			console.log(document.URL); // The document's URL address is logged to the console.
+			console.log(document.doctype); // The Doctype of the webpage file is logged to the console.
+			console.log(document.head); // The head tag of the HTML markup and its contents is logged to the console.
+			console.log(document.body); // The body tag of the HTML markup and its contents are logged to the console.
+			console.log(document.all); // An array of all tags contained within the HTML document will be logged to the console.
+			console.log(document.all[11]); // The 12th item of the array of the array will be logged to the console.
+			document.all[11].textContent = "Hello World"; // The text content of the 12th item of the array to "Hello World".
+			console.log(document.forms[0]); //
+			console.log(document.links); //
+			console.log(document.images); //
+			//-------------------------------------------------------------------------------------------------------
+		</script>
+	</body>
+</html>

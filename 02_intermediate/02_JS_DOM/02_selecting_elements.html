@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../resources/css/styles.css" />
+		<title>02 | Selecting DOM Elements</title>
+	</head>
+
+	<body>
+		<div class="header">
+			<h1>Selecting DOM Elements</h1>
+		</div>
+
+		<h1 style="text-align: center">My Buttons to be Selected:</h1>
+		<div class="buttons">
+			<button class="btn red-button" id="red">Red</button>
+			<button class="btn yellow-button" id="yellow">Yellow</button>
+			<button class="btn blue-button" id="blue">Blue</button>
+		</div>
+
+		<script>
+			//-------------------------------------------------------------------------------------------------------
+			// Types of element selectors:
+			// A) .getElementById()
+			// B) .getElementsByClassName()
+			// C) .getElementsByTagName()
+			// D) .querySelector()
+			// E) .querySelectorAll()
+
+			//  Selecting the various elements in the HTML markup & assigning them to variables:
+
+			let title = document.getElementsByTagName("h1");
+			// The object of the HTML markup with ID "red" is selected and saved into a variable:
+			let redButton = document.getElementById("red");
+			// The object of the HTML markup with ID "yellow" selected and saved into a variable:
+			let yellowButton = document.getElementById("yellow");
+			// The object of the HTML markup with ID "blue" selected and saved into a variable:
+			let blueButton = document.getElementById("blue");
+
+			console.log(title);
+			console.log(redButton); // Returns the element contained in this variable.
+			console.log(yellowButton); // Returns the element contained in this variable.
+			console.log(blueButton); // Returns the element contained in this variable.
+
+			//-------------------------------------------------------------------------------------------------------
+		</script>
+	</body>
+</html>

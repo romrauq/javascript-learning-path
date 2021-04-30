@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../resources/css/styles.css" />
+		<title>03 | Selecting DOM Elements</title>
+	</head>
+
+	<body>
+		<div class="header">
+			<h1>Selecting DOM Elements</h1>
+		</div>
+
+		<div class="buttons">
+			<button class="button" id="button">Click Me!</button>
+		</div>
+
+		<script>
+			//-------------------------------------------------------------------------------------------------------
+			let redButton = document.getElementById("button");
+
+			//Event listeners chained onto selected variables take two arguments,
+			// 1. The event "type" being listened for.
+			// 2. The function to be run when the event type is triggered.
+			button.addEventListener("click", myEvent); // A click event will trigger the function: myEvent().
+
+			function myEvent() {
+				alert("You clicked the button!");
+			}
+			//-------------------------------------------------------------------------------------------------------
+		</script>
+	</body>
+</html>
