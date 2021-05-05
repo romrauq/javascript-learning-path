@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../../resources/css/styles.css" />
-		<title>01 | AJAX JSON File Request</title>
+		<title>02 | AJAX JSON File Request</title>
 	</head>
 
 	<body>
@@ -20,10 +20,11 @@
 			function jsonRequest() {
 				// Create a new XMLHttprequest object:
 				let xhr = new XMLHttpRequest();
-				xhr.open("GET", "./json-info.json", true);
 
 				// Fetching data using .open() appended to the XMLHttprequest object:
 				// Params = 1. Request type, 2. Request URL/File directory, 3. Asychronous boolean)
+				xhr.open("GET", "./json-info.json", true);
+
 				xhr.onload = function () {
 					if (xhr.status == 200) {
 						// Converting the xhr.response from JSON format into a JavaScript object:
@@ -32,9 +33,10 @@
 							console.log(x + ": " + responseString[x]);
 						}
 					} else {
-						output.innerText = "Error 404: JSON file not found!";
+						console.log("Error 404: JSON file not found!");
 					}
 				};
+
 				//Send AJAX request using the the XMLHttprequest object with the .send() method appended:
 				xhr.send();
 			}
