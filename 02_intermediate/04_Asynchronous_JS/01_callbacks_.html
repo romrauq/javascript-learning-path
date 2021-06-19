@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../resources/css/styles.css" />
+		<title>01 | Callbacks</title>
+	</head>
+
+	<body>
+		<div class="header"><h1>Callbacks</h1></div>
+		<div id="output"></div>
+		<script>
+			//-------------------------------------------------------------------------------------------------------
+			const posts = [
+				{ title: "Post 01", body: "This is my first post." },
+				{ title: "Post 02", body: "This is my second post." },
+			];
+
+			function getPosts() {
+				setTimeout(() => {
+					let output = "";
+					posts.forEach((post) => {
+						output += `<h3>${post.title}</h3>`;
+						output += `<li>${post.body}</li>`;
+					});
+					document.getElementById("output").innerHTML = output;
+				}, 1000); // Function will execute after 1 second (1000 milliseconds)
+			}
+
+			// The second parameter is a placeholder for a "callback" function.
+			function createpost(post, callback) {
+				setTimeout(() => {
+					posts.push(post);
+					callback(); // The callback function is called immediately after the execution of the script above it.
+				}, 2000); // The new post will be pushed after 2 seconds (2000 milliseconds)
+			}
+
+			newPost = { title: "Post 03", body: "This is my third post." };
+			createpost(newPost, getPosts);
+			/* Now, we can call the createPost() function passing in two arguments:
+			1. The details of the new post & a callback function.
+			2. The getPosts() function which will be the callback funtion argument.
+			3. getPosts() will wait for the createPost() function to execute fully before it will execute.
+			*/
+			//-------------------------------------------------------------------------------------------------------
+		</script>
+	</body>
+</html>
