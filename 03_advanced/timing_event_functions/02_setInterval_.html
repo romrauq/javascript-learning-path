@@ -26,12 +26,12 @@
 			//The setInterval event function is used to execute a particular function at set intervals for an infinite time.
 			//setinterval(function(), time interval (in milliseconds))
 			//-------------------------------------------------------------------------------------------------------
-			let hour = new Date().getHours();
-			let min = new Date().getMinutes();
-			let sec = new Date().getSeconds();
-			let time = `${hour}:${min}:${sec}`;
-
-			setInterval(() => console.log(time), 1000);
+			setInterval(() => {
+				let hour = new Date().getHours();
+				let min = new Date().getMinutes();
+				let sec = new Date().getSeconds();
+				console.log(`${hour}:${min}:${sec}`);
+			}, 1000);
 			//-------------------------------------------------------------------------------------------------------
 		</script>
 	</body>
