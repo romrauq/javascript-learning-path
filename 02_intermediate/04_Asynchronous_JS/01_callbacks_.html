@@ -17,6 +17,7 @@
 				{ title: "Post 02", body: "This is my second post." },
 			];
 
+			// This function will fetch all available posts and display them onto the DOM.
 			function getPosts() {
 				setTimeout(() => {
 					let output = "";
@@ -25,10 +26,10 @@
 						output += `<li>${post.body}</li>`;
 					});
 					document.getElementById("output").innerHTML = output;
-				}, 1000); // Function will execute after 1 second (1000 milliseconds)
+				}, 1000); // Execute after 1 second/1000 milliseconds
 			}
 
-			// The second parameter is a placeholder for a "callback" function.
+			// The second function creates a new post item but takes longer than the getPosts() function to execute.
 			function createpost(post, callback) {
 				setTimeout(() => {
 					posts.push(post);
