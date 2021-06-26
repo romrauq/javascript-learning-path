@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/styles.css" />
+		<title>01 | setTimeout</title>
+	</head>
+
+	<body>
+		<div class="header"><h1>setTimeout</h1></div>
+		<script>
+			//The setTimeout() event function is used to execute a function after a set time elapses.
+			//setTimeout(function(), Timeout/countdown (in milliseconds))
+			//-------------------------------------------------------------------------------------------------------
+			setTimeout(function () {
+				console.log("This string will be logged after 1 second.");
+			}, 1000);
+			//-------------------------------------------------------------------------------------------------------
+			setTimeout(function () {
+				console.log("This string will be logged after 2 seconds.");
+			}, 2000);
+			//-------------------------------------------------------------------------------------------------------
+			setTimeout(
+				() => console.log("This string will be logged after 3 seconds"),
+				3000
+			);
+			//-------------------------------------------------------------------------------------------------------
+			setTimeout(() => myFunction(), 4000);
+
+			function myFunction() {
+				console.log("This string will be logged after 4 seconds");
+			}
+			//-------------------------------------------------------------------------------------------------------
+		</script>
+	</body>
+</html>
