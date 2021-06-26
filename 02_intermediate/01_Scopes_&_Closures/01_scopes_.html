@@ -17,13 +17,17 @@
 			//-------------------------------------------------------------------------------------------------------
 			let age = 5000; // A globally scoped variable.
 
-			function getAge() {
-				let age = 50; // A locally scoped variable within the getAge() function.
+			function getGlobalAge() {
 				console.log(age);
 			}
 
-			console.log(age); // The value of the variable returned will be that of the global scoped variable "5000".
-			getAge(); // The value returned will be that of the local scoped variable "50".
+			function getLocalAge() {
+				let age = 50; // A locally scoped variable.
+				console.log(age);
+			}
+
+			getGlobalAge(); // The value returned will be that of the global scoped variable "5000".
+			getLocalAge(); // The value returned will be that of the local scoped variable "50".
 			//-------------------------------------------------------------------------------------------------------
 		</script>
 	</body>
