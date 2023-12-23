@@ -3,7 +3,7 @@ let str = "Hello World";
 let str2 = "219";
 console.log(typeof str, typeof str2); // both return "string"
 
-// 2. Numbers:
+// 2. Integers:
 let num = 2020;
 let num2 = Infinity;
 console.log(typeof num, typeof num2); // Returns "number"
