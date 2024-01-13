@@ -1,4 +1,5 @@
 // Creating an new Object using object literal notation:
+
 // A variable is defined to contain its object properties and values:
 let character = {
 	firstName: "Killua",
@@ -6,6 +7,12 @@ let character = {
 	age: 13,
 };
 
-console.table(character);
-console.log(Object.keys(character)); // Object.keys(arg) function returns the array keys of the passed argument.
-console.log(Object.values(character)); // Object.values(arg) function returns the array values of the passed argument.
+console.log(character);
+
+// Object.keys(arg) returns an array containing items of the keys of the passed object.
+console.log(Object.keys(character));
+
+// Object.values(object_name) returns an array containing the values of the passed object.
+console.log(Object.values(character));
+
+console.log(typeof character.age);
