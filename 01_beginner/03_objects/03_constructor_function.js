@@ -1,30 +1,31 @@
 // Creating Objects using an object constructor function:
 // NOTE! The object class constructor function name should always begin with a capital letter.
-// Creating an object class using a constructor function:
 
+// Defining a constructor function named "Person":
 function Person(firstName, lastName, age) {
 	this.firstName = firstName;
 	this.lastName = lastName;
 	this.age = age;
-	// Object method:
+	// Defining a method for this object:
 	this.ageStatement = `${this.firstName} ${this.lastName} is ${this.age} years old`;
 }
 
-// Adding a prototype method to the "Person" class:
+// Adding a prototype method to the "Person" constructor :
 Person.prototype.getFullName = function () {
 	return `${this.firstName} ${this.lastName}`;
 };
 
-// Adding another prototype to "Person" class:
+// Adding another prototype to "Person" constructor:
 Person.prototype.editAge = function (age) {
 	this.age = age;
-	this.ageEdited = true; // This property assigns a boolean to an object when this function is used
-	// to edit the "age" property after initial object instantiation.
+	this.ageEdited = true; // the key "ageEdited" Boolean is added to the object is is used on and assigns the boolean true to that key.
 };
 
-// Instantiating a new object using the constructor function method (of the "Person" object class created above):
+// Instantiating a new person object using the "Person" constructor function:
 let person1 = new Person("Evans", "Gardner", 34);
 
-person1.editAge(77); // Using the prototype method .editAge(arg) changes the age property value of the "person1" object.
+//  Modifying the age key value of "person1" object using prototype method "editAge()":
+person1.editAge(36);
 
-console.log(person1); // Logging to console will show changes made to the age property value and a new property and value.
+// Logging object to console:
+console.log(person1);
