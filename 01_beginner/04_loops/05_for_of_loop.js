@@ -5,11 +5,10 @@ const myArr2 = [
 	["Dorothy", 6],
 	["Whitney", 6],
 ];
-let person = { name: "John", age: 34, occupation: "Fixer" };
 //-------------------------------------------------------------------------------------------------------
-// for...of will loop through and return values of an array.
-// for...of loops only loop through iterable objects like such as arrays, map and set.
-// for...of loops do not work on objects because objects are not iterable.
+// for...of will returns each value of each index of an array.
+// for...of loops only work with iterable objects like such as arrays, map and set.
+// for...of loops do not work with objects because objects are not iterable.
 
 for (x of myArr) {
 	console.log(x);
