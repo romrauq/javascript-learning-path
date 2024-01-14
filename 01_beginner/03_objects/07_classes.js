@@ -1,4 +1,4 @@
-// Creating an object class:
+// Defining an object class:
 class Hunter {
 	constructor(name, age, nenType) {
 		this.name = name;
@@ -6,7 +6,7 @@ class Hunter {
 		this.nenType = nenType;
 	}
 
-	// Object functions are automatically "prototyped" when created using an object class.
+	// Methods within a class are automatically "prototyped" into objects created using the object class.
 	characterDetails() {
 		return `${this.name} is a hunter whose nen type is that of a ${this.nenType}.`;
 	}
@@ -21,12 +21,14 @@ class Hunter {
 	}
 	// Creating a static method:
 	static classDetails() {
-		return "This method can be used on the main class without having to instantiate new objects.";
+		return "This is returned by a static method when called by chaining it on the class variable.";
 	}
 }
 
-console.log(Hunter.classDetails()); // Static functions are chained onto the class name.
+// Static methods used by chaining them on the class name.
+console.log(Hunter.classDetails());
 
 // Instantiating a new oject using the "Hunter" class:
 let hunter1 = new Hunter("Hisoka Morrow", 26, "Transmuter");
 console.log(hunter1);
+console.log(hunter1.characterDetails());
