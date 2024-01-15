@@ -1,11 +1,10 @@
 // Functions are used to contain reusable sections of code.
-// Calling a function will execute its contained code.
 
-// Creating a function named "myFunction":
+// Defining a function named "myFunction":
 function myFunction() {
-	// function statements go within the curly brackets:
-	alert("You have created a function!");
+	// function statements are written within the function's curly brackets:
+	console.log("You have created a function!");
 }
 
-// Calling function to be executed:
-myFunction(); // This will run the alert() funtion contained within myFunction().
+myFunction(); // Calling/executing the function.
+// Calling/executing/running a function runs statements within it's curly brackets.

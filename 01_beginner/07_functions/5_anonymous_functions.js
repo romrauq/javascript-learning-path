@@ -2,7 +2,7 @@
 
 // Assigning an anonymous function to a variable named "unknown":
 let unknown = function () {
-	alert("You have created an anonymous function!");
+	console.log("You have created an anonymous function!");
 };
 
-unknown(); // Anonymous functions are called using the variable name that the function has been assigned to.
+unknown(); // Anonymous functions are executed using the variable name that the function has been assigned to.
