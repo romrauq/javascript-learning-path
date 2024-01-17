@@ -60,10 +60,12 @@ schools.forEach((school) => console.log("School name: " + school.name)); //Short
 // 3. Using an arrow function with curly brackets to add multiple statements within the arrow function:
 schools.forEach((school) => {
 	console.log(school.name, "-", school.category);
+	console.log("Location:", school.location);
+	console.log("Year Completed:", school.end);
 });
 //-------------------------------------------------------------------------------------------------------
 
-// Using the forEach() function to add each of the array items from one array to another empty array.
+// Using forEach() object method to add each of the array items from one array to another empty array.
 const ages = [3, 6, 7, 13, 17, 19, 21, 25, 28];
 xavi = [];
 
