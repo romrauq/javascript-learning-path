@@ -17,6 +17,11 @@ class Building {
 	}
 
 	// Defining a setter method using the `set` keyword:
+	set editName(val) {
+		this.name = val;
+	}
+
+	// Defining a setter method using the `set` keyword:
 	set area(val) {
 		this.width = Math.sqrt(val);
 		this.height = Math.sqrt(val);
@@ -29,4 +34,6 @@ console.log(myBuilding.area);
 myBuilding.area = 600;
 console.log(myBuilding.area);
 console.log(myBuilding.width);
+myBuilding.editName = "Killer Villa";
 console.log(myBuilding.areaRequests);
+console.log(myBuilding);
